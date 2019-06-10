@@ -1,16 +1,24 @@
 $(document).ready(function () {
-    function search(e) {
-        e.preventeDefault();
+    
+   
+    function clear(){
+        $("#articles").remove(".article");
+        $("#search").val("");
+        $("#startYear").val("");
+        $("#endtYear").val("");
+
+    }
+    $("#searchButton").click(function(e) {
+        e.preventDefault();
         var search = $("#search").val();
         var startYear = $("#startYear").val();
-        var endtYear = $("#endtYear").val();
+        var endtYear = $("#endYear").val();
+        //var num = $("#number:selected").val();
         var num = $("#numbers").val();
         var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+search+"&begin_date="+startYear+"0101&end_date="+endtYear+"1231&api-key=roCXKXySi6LwQA5k4H5mIH6NJA3hAlOA"
         $("#search").val("");
         $("#startYear").val("");
-        $("#endtYear").val("");
-        $("#numbers").val("");
-        
+        $("#endYear").val("");
         $.ajax({
             method: "GET",
             url: queryURL
@@ -29,11 +37,12 @@ $(document).ready(function () {
                 let pDate = $("<p>").text(date);
                 let span = $("<span>").text(author);
                 let newDiv = $("<div>");
+                newDiv.addClass("article");
                 newDiv.append(a,span,p,pDate);
-                $("#articles").append(newDiv);
+                $(".card").append(newDiv);
             }
         });
-    }
-    $("#searchButton").on("click", search);
+    });
+    $("#clearhButton").on("click", clear());
 
 });
