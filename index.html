@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NYT Article Search</title>
+
+    <!-- JQUERY CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- BootStrap CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    
+
+</head>
+<body>
+    
+<!-- // SEARCH FORM -->
+
+<div id="form-container">
+    <div id="row">
+        <div id="col-md-8">
+            <form>
+                <div class="form-group">
+                    <label for="Search Term">Search Term</label>
+                    <input type="text" class="form-control" id="search" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="records">Number of Records to Retrieve:</label>
+                    <input type="text" class="form-control" id="numbers" placeholder="5">
+                </div>
+                <div class="form-group">
+                    <label for="records">Start Year (Optional):</label>
+                    <input type="text" class="form-control" id="startYear" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="records">End Year (Optional):</label>
+                    <input type="text" class="form-control" id="endYear" placeholder="">
+                </div>
+                <div class="col-auto my-1">
+                    <button id="searchButton" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col-auto my-1">
+                        <button id="clearButton" type="submit" class="btn btn-primary">Clear Results</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html> 
