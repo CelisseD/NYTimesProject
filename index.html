@@ -22,16 +22,19 @@ body{
 }
 </style>
 <body>
+
 <header>
         <div class="jumbotron bg-dark mt-4">
                 <h1 class="display-4 text-light text-center"><i class="far fa-newspaper"></i> NYT SEARCH</h1>
         </div>
 </header>
+
 <!-- // SEARCH FORM -->
 <div id="form-container">
     <div id="row">
         <div id="col-md-8">
             <form>
+                <div class="card-header">Search Parameters</div>
                 <div class="form-group">
                     <label for="Search Term">Search Term</label>
                     <input type="text" class="form-control" id="search" placeholder="">
@@ -49,20 +52,29 @@ body{
                     <input type="text" class="form-control" id="endYear" placeholder="">
                 </div>
                 <div class="col-auto my-1">
-                    <button id="searchButton" type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                <div class="col-auto my-1">
-                    <button id="clearButton" type="submit" class="btn btn-primary">Clear Results</button>
+                    <button id="searchButton" type="submit" class="btn btn-link" style="color: #636363"><i class="fas fa-search"></i>Submit</button>
+                    <button id="clearButton" type="submit" class="btn btn-link" style="color: #636363"><i class="fas fa-trash-alt"></i>Clear Results</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
+<!-- TOP ARTICLES -->
 
+<div id="articles">
 
+        <div class="card">
+                <div class="card-header">
+                  Top Articles
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text"></p>
+                </div>
+              </div>
 
-
+</div>
 
 
 <footer class="footer mt-auto py-3 fixed-bottom text-center">
