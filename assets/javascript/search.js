@@ -39,7 +39,7 @@ $(document).ready(function () {
                 let newDiv = $("<div>");
                 newDiv.addClass("article");
                 newDiv.append(a,span,p,pDate);
-                $(".card").append(newDiv);
+                $("#articles").append(newDiv);
             }
         });
     });
